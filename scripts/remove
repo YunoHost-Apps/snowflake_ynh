@@ -20,8 +20,6 @@ fi
 
 ynh_config_remove_systemd
 
-#ynh_config_remove_nginx
-
 #=================================================
 # END OF SCRIPT
 #=================================================

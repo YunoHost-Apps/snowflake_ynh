@@ -34,10 +34,6 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
-    [install.init_main_permission]
-    type = "group"
-    default = "visitors"
-
 [resources]
 
     [resources.system_user]
@@ -45,7 +41,6 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.permissions]
-    main.url = "/"
 
     [resources.ports]
     main.default = 4444

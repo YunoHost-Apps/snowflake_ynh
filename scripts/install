@@ -1,0 +1,54 @@
+#!/bin/bash
+
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+source _common.sh
+source /usr/share/yunohost/helpers
+
+#=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_script_progression "Setting up source files..."
+
+# Download, check integrity, uncompress and patch the source from manifest.toml
+ynh_setup_source --dest_dir="$install_dir"
+
+#=================================================
+# BUILD APP
+#=================================================
+ynh_script_progression "Building $app..."
+
+pushd $install_dir/proxy
+	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/snowflacke
+popd
+
+#chmod +x "$install_dir/snowflacke"
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression "Adding system configurations related to $app..."
+
+# Create a dedicated NGINX config using the conf/nginx.conf template
+ynh_config_add_nginx
+
+# Create a dedicated systemd config
+ynh_config_add_systemd
+
+yunohost service add "$app" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"
+
+#=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression "Starting $app's systemd service..."
+
+# Start a systemd service
+ynh_systemctl --service="$app" --action="start"
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_script_progression "Installation of $app completed"

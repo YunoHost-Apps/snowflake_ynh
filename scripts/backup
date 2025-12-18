@@ -13,7 +13,7 @@ ynh_print_info "Declaring files to be backed up..."
 #=================================================
 
 # Backup the systemd service unit
-ynh_backup "/etc/systemd/system/$app.service"
+ynh_backup "/usr/lib/systemd/system/$app.service"
 
 #=================================================
 # END OF SCRIPT

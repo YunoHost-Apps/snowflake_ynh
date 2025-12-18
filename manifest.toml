@@ -23,8 +23,8 @@ helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
 
-ldap = false
-sso = false
+ldap = "not_relevant"
+sso = "not_relevant"
 
 disk = "600M"
 ram.build = "500M"
@@ -33,10 +33,6 @@ ram.runtime = "50M"
 [install]
     [install.domain]
     type = "domain"
-
-    [install.init_main_permission]
-    type = "group"
-    default = "visitors"
 
 [resources]
 
@@ -53,10 +49,10 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.permissions]
-    main.url = "/"
 
     [resources.ports]
     main.default = 4444
+    main.exposed = "Both"
 
     [resources.go]
     version = "1.22"

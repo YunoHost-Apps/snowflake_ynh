@@ -4,18 +4,18 @@ It shall NOT be edited by hand.
 -->
 
 <h1>
-  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/snowflake.png" width="32px" alt="Logo of Snowflake">
+  <img src="https://raw.githubusercontent.com/YunoHost/apps/main/logos/snowflake-proxy.png" width="32px" alt="Logo of Snowflake">
   Snowflake, packaged for YunoHost
 </h1>
 
 Pluggable Transport using WebRTC
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://snowflake.torproject.org/)
-[![Version: 2.5.1~ynh1](https://img.shields.io/badge/Version-2.5.1~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/snowflake/)
+[![Version: 2.5.1~ynh1](https://img.shields.io/badge/Version-2.5.1~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/snowflake-proxy/)
 
 <div align="center">
-<a href="https://apps.yunohost.org/app/snowflake"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
-<a href="https://github.com/YunoHost-Apps/snowflake_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
+<a href="https://apps.yunohost.org/app/snowflake-proxy"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
+<a href="https://github.com/YunoHost-Apps/snowflake-proxy_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
 
 
@@ -24,19 +24,19 @@ Pluggable Transport using WebRTC
 
 ## 📦 Developer info
 
-[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/snowflake)](https://ci-apps.yunohost.org/ci/apps/snowflake/)
+[![Automatic tests level](https://apps.yunohost.org/badge/cilevel/snowflake-proxy)](https://ci-apps.yunohost.org/ci/apps/snowflake-proxy/)
 
 🛠️ Upstream Snowflake repository: <https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake>
 
-Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/snowflake_ynh/tree/testing).
+Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/snowflake-proxy_ynh/tree/testing).
 
 The `testing` branch can be tested using:
 ```
 # fresh install:
-sudo yunohost app install https://github.com/YunoHost-Apps/snowflake_ynh/tree/testing
+sudo yunohost app install https://github.com/YunoHost-Apps/snowflake-proxy_ynh/tree/testing
 
 # upgrade an existing install:
-sudo yunohost app upgrade snowflake -u https://github.com/YunoHost-Apps/snowflake_ynh/tree/testing
+sudo yunohost app upgrade snowflake-proxy -u https://github.com/YunoHost-Apps/snowflake-proxy_ynh/tree/testing
 ```
 
 ### 📚 App packaging documentation

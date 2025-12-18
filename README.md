@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 Pluggable Transport using WebRTC
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://snowflake.torproject.org/)
-[![Version: 2.11.0~ynh1](https://img.shields.io/badge/Version-2.11.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/snowflake/)
+[![Version: 2.5.1~ynh1](https://img.shields.io/badge/Version-2.5.1~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/snowflake/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/snowflake"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>

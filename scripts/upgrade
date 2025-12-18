@@ -12,7 +12,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="stop"
+ynh_systemctl --service="snowflake-proxy" --action="stop"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -26,18 +26,18 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
 
-ynh_config_add_nginx
+#ynh_config_add_nginx
 
-ynh_config_add_systemd
+#ynh_config_add_systemd
 
-yunohost service add "$app" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"
+yunohost service add "snowflake-proxy" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service="snowflake-proxy" --action="start"
 
 #=================================================
 # END OF SCRIPT

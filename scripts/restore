@@ -20,21 +20,21 @@ ynh_restore "$install_dir"
 #=================================================
 ynh_script_progression "Restoring system configurations related to $app..."
 
-ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
+#ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
-ynh_restore "/etc/systemd/system/$app.service"
-systemctl enable "$app.service" --quiet
+#ynh_restore "/etc/systemd/system/$app.service"
+#systemctl enable "$app.service" --quiet
 
-yunohost service add "$app" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"
+yunohost service add "snowflake-proxy" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service="snowflake-proxy" --action="start"
 
-ynh_systemctl --service=nginx --action=reload
+#ynh_systemctl --service=nginx --action=reload
 
 #=================================================
 # END OF SCRIPT

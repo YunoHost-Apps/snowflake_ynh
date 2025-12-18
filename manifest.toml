@@ -14,7 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "BSD-3-Clause"
 website = "https://snowflake.torproject.org/"
-admindoc = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/wikis/Technical%20Overview"
+admindoc = "https://community.torproject.org/relay/setup/snowflake/standalone/"
 code = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake"
 
 [integration]

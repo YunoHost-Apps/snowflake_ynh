@@ -1,1 +1,1 @@
-Ceci est une fausse description des fonctionalités de l'app
+Snowflake est un protocole de transport permettant de contourner la censure à l'aide de WebRTC, inspiré de Flashproxy.

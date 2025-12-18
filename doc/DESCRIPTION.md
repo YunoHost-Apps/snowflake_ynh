@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+Snowflake is a censorship-evasion pluggable transport using WebRTC, inspired by Flashproxy.

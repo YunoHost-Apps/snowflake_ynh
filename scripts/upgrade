@@ -36,8 +36,6 @@ chmod +x "$install_dir/snowflacke"
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
 
-#ynh_config_add_nginx
-
 ynh_config_add_systemd
 
 yunohost service add "$app" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"

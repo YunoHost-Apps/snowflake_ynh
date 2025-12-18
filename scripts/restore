@@ -11,6 +11,9 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Restoring system configurations related to $app..."
 
+ynh_restore "/usr/lib/systemd/system/$app.service"
+systemctl enable "$app.service" --quiet
+
 yunohost service add "$app" --description="Pluggable Transport using WebRTC" --log="/var/log/$app/$app.log"
 
 #=================================================

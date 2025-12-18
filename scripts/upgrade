@@ -4,7 +4,6 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -22,11 +21,22 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir" --full_replace
 
 #=================================================
+# BUILD APP
+#=================================================
+ynh_script_progression "Building $app..."
+
+pushd $install_dir/proxy
+	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/snowflacke
+popd
+
+chmod +x "$install_dir/snowflacke"
+
+#=================================================
 # REAPPLY SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
 
-ynh_config_add_nginx
+#ynh_config_add_nginx
 
 ynh_config_add_systemd
 

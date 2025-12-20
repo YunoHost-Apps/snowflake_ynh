@@ -50,9 +50,5 @@ ram.runtime = "50M"
 
     [resources.permissions]
 
-    [resources.ports]
-    main.default = 4444
-    main.exposed = "Both"
-
     [resources.go]
     version = "1.22"

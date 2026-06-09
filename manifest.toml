@@ -7,7 +7,7 @@ name = "Snowflake"
 description.en = "Pluggable Transport using WebRTC"
 description.fr = "Proxy utilisant WebRTC"
 
-version = "2.13.1~ynh1"
+version = "2.14.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -39,8 +39,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/archive/v2.13.1/snowflake-v2.13.1.tar.bz2"
-    sha256 = "66165f998c0de92470b519a69f31933f791354455dd4586450538136eb2c602e"
+    url = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/archive/v2.14.0/snowflake-v2.14.0.tar.bz2"
+    sha256 = "6bc406a9c8362617143b7415a588e839a57003e137c7d95ee243ac0153738b1d"
 
     autoupdate.strategy = "latest_gitlab_tag"
 
